@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "99db484e-121b-4316-b271-7aaecfe45774",
+		"name": "csvToJson",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21668082"
+	},
+	"item": [
+		{
+			"name": "multiColumns",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "csvFile",
+							"type": "file",
+							"src": "/Users/andreatrussardi/itAcademy/csvToJson/inputUpload/inputFile.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/csvToJson",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"csvToJson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "oneColumn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "csvFile",
+							"type": "file",
+							"src": "/Users/andreatrussardi/itAcademy/csvToJson/inputUpload/inputFile.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/csvToJson/:column",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"csvToJson",
+						":column"
+					],
+					"variable": [
+						{
+							"key": "column",
+							"value": "Make"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
