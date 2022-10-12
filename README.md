@@ -13,7 +13,7 @@ Node js REST API to convert CSV files to JSON response
   ```
   npm i
   ```  
-* Run the project inside csvToJson folder to localhost port 3000:
+* Run the project inside csvToJson folder (node src/index.js) to localhost port 3000:
    ```
   npm start
   ```
@@ -27,4 +27,4 @@ Node js REST API to convert CSV files to JSON response
 POSTMAN collection contains following requests:
 
 - POST /csvToJson - Body form-data {key: csvFile} to upload CSV file from inputUpload folder
-- POST /csvToJson/:columnId - Body form-data {key: csvFile} to upload CSV file and Params {key: column} to convert into JSON response only that column 
+- POST /csvToJson/:column - Body form-data {key: csvFile} to upload CSV file and Params {key: column} to convert into JSON response only that column 
