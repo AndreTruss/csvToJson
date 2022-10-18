@@ -4,15 +4,16 @@ const app = express();
 const http = require( 'http' );
 const server = http.createServer( app );
 
-const router = require( './routes/router' );
-const { notFoundRoute } = require( './middlewares/middleware');
+//const router = require( './routes/routeBarrio' );
+const { notFoundRoute, readCSV } = require( './middlewares/middleware');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use( router );
+readCSV()
+//app.use( '/', router );
 
-app.use( notFoundRoute );
+//app.use( notFoundRoute );
 
 const PORT = 3000;
 server.listen( PORT, () => {
